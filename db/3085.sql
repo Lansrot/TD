@@ -22,7 +22,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `config`;
 CREATE TABLE `config`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主キー',
   `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '配置参数名称',
   `value` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '配置参数值',
   PRIMARY KEY (`id`) USING BTREE
@@ -41,60 +41,60 @@ INSERT INTO `config` VALUES (6, 'homepage', NULL);
 -- ----------------------------
 DROP TABLE IF EXISTS `defaultuser`;
 CREATE TABLE `defaultuser`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `addtime` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `username` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
-  `mima` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密码',
-  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '姓名',
-  `sex` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '性别',
-  `age` int(11) DEFAULT NULL COMMENT '年龄',
-  `phone` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '电话',
-  `picture` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '照片',
-  `email` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '邮箱',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主キー',
+  `addtime` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作る時間',
+  `username` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'User',
+  `mima` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'password',
+  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '名前',
+  `sex` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '性別',
+  `age` int(11) DEFAULT NULL COMMENT '年齢',
+  `phone` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '電話番号',
+  `picture` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '写真',
+  `email` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'メール',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `username`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 47 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '注册用户' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 47 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '新規' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of defaultuser
 -- ----------------------------
-INSERT INTO `defaultuser` VALUES (41, '2021-02-24 19:11:05', '用户名1', '123456', '姓名1', '男', 1, '020-89819991', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture1.jpg', '773890001@qq.com');
-INSERT INTO `defaultuser` VALUES (42, '2021-02-24 19:11:05', '用户名2', '123456', '姓名2', '男', 2, '020-89819992', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture2.jpg', '773890002@qq.com');
-INSERT INTO `defaultuser` VALUES (43, '2021-02-24 19:11:05', '用户名3', '123456', '姓名3', '男', 3, '020-89819993', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture3.jpg', '773890003@qq.com');
-INSERT INTO `defaultuser` VALUES (44, '2021-02-24 19:11:05', '用户名4', '123456', '姓名4', '男', 4, '020-89819994', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture4.jpg', '773890004@qq.com');
-INSERT INTO `defaultuser` VALUES (45, '2021-02-24 19:11:05', '用户名5', '123456', '姓名5', '男', 5, '020-89819995', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture5.jpg', '773890005@qq.com');
-INSERT INTO `defaultuser` VALUES (46, '2021-02-24 19:11:05', '用户名6', '123456', '姓名6', '男', 6, '020-89819996', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture6.jpg', '773890006@qq.com');
+INSERT INTO `defaultuser` VALUES (41, '2021-02-24 19:11:05', 'User1', '123456', '名前1', '男', 1, '020-89819991', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture1.jpg', '773890001@qq.com');
+INSERT INTO `defaultuser` VALUES (42, '2021-02-24 19:11:05', 'User2', '123456', '名前2', '男', 2, '020-89819992', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture2.jpg', '773890002@qq.com');
+INSERT INTO `defaultuser` VALUES (43, '2021-02-24 19:11:05', 'User3', '123456', '名前3', '男', 3, '020-89819993', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture3.jpg', '773890003@qq.com');
+INSERT INTO `defaultuser` VALUES (44, '2021-02-24 19:11:05', 'User4', '123456', '名前4', '男', 4, '020-89819994', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture4.jpg', '773890004@qq.com');
+INSERT INTO `defaultuser` VALUES (45, '2021-02-24 19:11:05', 'User5', '123456', '名前5', '男', 5, '020-89819995', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture5.jpg', '773890005@qq.com');
+INSERT INTO `defaultuser` VALUES (46, '2021-02-24 19:11:05', 'User6', '123456', '名前6', '男', 6, '020-89819996', 'http://localhost:8080/springboot2r52r/upload/defaultuser_picture6.jpg', '773890006@qq.com');
 
 -- ----------------------------
 -- Table structure for discusslvyoufangan
 -- ----------------------------
 DROP TABLE IF EXISTS `discusslvyoufangan`;
 CREATE TABLE `discusslvyoufangan`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `addtime` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `refid` bigint(20) NOT NULL COMMENT '关联表id',
-  `userid` bigint(20) NOT NULL COMMENT '用户id',
-  `content` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '评论内容',
-  `reply` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '回复内容',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主キー',
+  `addtime` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作る時間',
+  `refid` bigint(20) NOT NULL COMMENT '関連表id',
+  `userid` bigint(20) NOT NULL COMMENT 'Userid',
+  `content` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '評価',
+  `reply` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '回復',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 77 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '旅游方案评论表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 77 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '評価表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of discusslvyoufangan
 -- ----------------------------
-INSERT INTO `discusslvyoufangan` VALUES (71, '2021-02-24 19:11:05', 1, 1, '评论内容1', '回复内容1');
-INSERT INTO `discusslvyoufangan` VALUES (72, '2021-02-24 19:11:05', 2, 2, '评论内容2', '回复内容2');
-INSERT INTO `discusslvyoufangan` VALUES (73, '2021-02-24 19:11:05', 3, 3, '评论内容3', '回复内容3');
-INSERT INTO `discusslvyoufangan` VALUES (74, '2021-02-24 19:11:05', 4, 4, '评论内容4', '回复内容4');
-INSERT INTO `discusslvyoufangan` VALUES (75, '2021-02-24 19:11:05', 5, 5, '评论内容5', '回复内容5');
-INSERT INTO `discusslvyoufangan` VALUES (76, '2021-02-24 19:11:05', 6, 6, '评论内容6', '回复内容6');
+INSERT INTO `discusslvyoufangan` VALUES (71, '2021-02-24 19:11:05', 1, 1, '評価1', '回復1');
+INSERT INTO `discusslvyoufangan` VALUES (72, '2021-02-24 19:11:05', 2, 2, '評価2', '回復2');
+INSERT INTO `discusslvyoufangan` VALUES (73, '2021-02-24 19:11:05', 3, 3, '評価3', '回復3');
+INSERT INTO `discusslvyoufangan` VALUES (74, '2021-02-24 19:11:05', 4, 4, '評価4', '回復4');
+INSERT INTO `discusslvyoufangan` VALUES (75, '2021-02-24 19:11:05', 5, 5, '評価5', '回復5');
+INSERT INTO `discusslvyoufangan` VALUES (76, '2021-02-24 19:11:05', 6, 6, '評価6', '回復6');
 
 -- ----------------------------
 -- Table structure for lvyoufangan
 -- ----------------------------
 DROP TABLE IF EXISTS `lvyoufangan`;
 CREATE TABLE `lvyoufangan`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主キー',
   `addtime` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `fanganbianhao` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '方案编号',
   `fanganmingcheng` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '方案名称',
