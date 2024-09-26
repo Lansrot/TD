@@ -115,7 +115,7 @@ CREATE TABLE `lvyoufangan` (
   `fanganmingcheng` varchar(200) NOT NULL COMMENT '方案名称',
   `zhaopian` varchar(200) DEFAULT NULL COMMENT '照片',
   `chufachengshi` varchar(200) DEFAULT NULL COMMENT '出发城市',
-  `lvyouluxian` varchar(200) DEFAULT NULL COMMENT '旅游路线',
+  `lvyouluxian` varchar(200) DEFAULT NULL COMMENT '路线',
   `yudingxuzhi` longtext COMMENT '预定须知',
   `xingchengtianshu` varchar(200) DEFAULT NULL COMMENT '行程天数',
   `xiangqingjianjie` longtext COMMENT '详情简介',
@@ -128,7 +128,7 @@ CREATE TABLE `lvyoufangan` (
   `clicknum` int(11) DEFAULT '0' COMMENT '点击次数',
   PRIMARY KEY (`id`),
   UNIQUE KEY `fanganbianhao` (`fanganbianhao`)
-) ENGINE=InnoDB AUTO_INCREMENT=1614161683619 DEFAULT CHARSET=utf8 COMMENT='旅游方案';
+) ENGINE=InnoDB AUTO_INCREMENT=1614161683619 DEFAULT CHARSET=utf8 COMMENT='方案';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -137,7 +137,7 @@ CREATE TABLE `lvyoufangan` (
 
 LOCK TABLES `lvyoufangan` WRITE;
 /*!40000 ALTER TABLE `lvyoufangan` DISABLE KEYS */;
-INSERT INTO `lvyoufangan` VALUES (21,'2021-02-24 10:11:05','方案编号1','方案名称1','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian1.jpg','出发城市1','旅游路线1','预定须知1','行程天数1','详情简介1',1,'是','',1,1,'2021-02-24 18:11:05',1),(22,'2021-02-24 10:11:05','方案编号2','方案名称2','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian2.jpg','出发城市2','旅游路线2','预定须知2','行程天数2','详情简介2',2,'是','',2,2,'2021-02-24 18:11:05',2),(23,'2021-02-24 10:11:05','方案编号3','方案名称3','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian3.jpg','出发城市3','旅游路线3','预定须知3','行程天数3','详情简介3',3,'是','',3,3,'2021-02-24 18:11:05',3),(24,'2021-02-24 10:11:05','方案编号4','方案名称4','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian4.jpg','出发城市4','旅游路线4','预定须知4','行程天数4','详情简介4',4,'是','',4,4,'2021-02-24 18:11:05',4),(25,'2021-02-24 10:11:05','方案编号5','方案名称5','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian5.jpg','出发城市5','旅游路线5','预定须知5','行程天数5','详情简介5',5,'是','',5,5,'2021-02-24 18:11:05',5),(1614161683618,'2021-02-24 10:14:42','1614161617147','长沙七日游','http://localhost:8080/springboot2r52r/upload/1614161635826.ico','广州','广州至长沙','11','七天','<p>11<img src=\"http://localhost:8080/springboot2r52r/upload/1614161680957.ico\"></p>',1099,'是',NULL,0,0,'2021-02-24 10:21:33',4);
+INSERT INTO `lvyoufangan` VALUES (21,'2021-02-24 10:11:05','方案编号1','方案名称1','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian1.jpg','出发城市1','路线1','预定须知1','行程天数1','详情简介1',1,'是','',1,1,'2021-02-24 18:11:05',1),(22,'2021-02-24 10:11:05','方案编号2','方案名称2','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian2.jpg','出发城市2','旅游路线2','预定须知2','行程天数2','详情简介2',2,'是','',2,2,'2021-02-24 18:11:05',2),(23,'2021-02-24 10:11:05','方案编号3','方案名称3','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian3.jpg','出发城市3','旅游路线3','预定须知3','行程天数3','详情简介3',3,'是','',3,3,'2021-02-24 18:11:05',3),(24,'2021-02-24 10:11:05','方案编号4','方案名称4','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian4.jpg','出发城市4','旅游路线4','预定须知4','行程天数4','详情简介4',4,'是','',4,4,'2021-02-24 18:11:05',4),(25,'2021-02-24 10:11:05','方案编号5','方案名称5','http://localhost:8080/springboot2r52r/upload/lvyoufangan_zhaopian5.jpg','出发城市5','旅游路线5','预定须知5','行程天数5','详情简介5',5,'是','',5,5,'2021-02-24 18:11:05',5),(1614161683618,'2021-02-24 10:14:42','1614161617147','长沙七日游','http://localhost:8080/springboot2r52r/upload/1614161635826.ico','广州','广州至长沙','11','七天','<p>11<img src=\"http://localhost:8080/springboot2r52r/upload/1614161680957.ico\"></p>',1099,'是',NULL,0,0,'2021-02-24 10:21:33',4);
 /*!40000 ALTER TABLE `lvyoufangan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,7 +160,7 @@ CREATE TABLE `lvyougoumai` (
   `xingming` varchar(200) DEFAULT NULL COMMENT '姓名',
   `ispay` varchar(200) DEFAULT '未支付' COMMENT '是否支付',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1614162090553 DEFAULT CHARSET=utf8 COMMENT='旅游购买';
+) ENGINE=InnoDB AUTO_INCREMENT=1614162090553 DEFAULT CHARSET=utf8 COMMENT='购买';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
